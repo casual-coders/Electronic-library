@@ -16,6 +16,7 @@ function Book(bName,path,category,discription) {
   this.path=path;
   this.category=category;
   this.discription=discription;
+  this.availability=true;
 
   allBooks.push(this);
 

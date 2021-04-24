@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/book-store.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -31,7 +31,38 @@
                     </div>
 
     </header>
+
     <main>
+        <div id="form">
+            <form action="" id="userEnter">
+                <fieldset>       
+                   <label for="cat">category:</label>
+                   <select name="category" id="cat">
+                    <option value="All">All</option>
+                     <option value="medical">Medical books</option>
+                     <option value="engineering">Engineering Books</option>
+                     <option value="computer">Computer and programming</option>
+                   </select>
+                    <br>
+                   <label for="book">Book</label>
+                   <input type="text" id="book" placeholder="Book name.." required>
+                   <br>
+                   <label for="yourName">Your name</label>
+                   <input type="text" id="yourName" placeholder="your name.." required>
+                   <br>
+                   <label for="loction">your location</label>
+                   <br>
+                   <textarea name="message" rows="10" cols="30" id="location" placeholder="your location.." required></textarea>
+                   <br>
+                   <input type="submit" value="order book">
+                </fieldset>
+            </form>
+        </div>
+    
+            <div id="cards">
+    
+            </div>
+    
 
     </main>
     <footer class="footer-distributed">
@@ -74,5 +105,6 @@
             </div>
         </div>
     </footer>
+    <script src="../js/book-store.js"></script>
 </body>
 </html>
