@@ -8,7 +8,7 @@ main{
 }
 
 #home{
-  margin: 5% 0;
+  margin: 2% 0;
   background-color: #EAEFF0;
   padding: 2.5%;
   border-radius: 100px;
@@ -49,15 +49,13 @@ main{
 #home .left-home p {
   margin: 10px 0;
   padding-top: 20px;
-  padding-left: 30px;
+  padding-left: 10px;
   font-weight: normal;
   font-size: .9em;
   color: #161F22;
   line-height:1.2;
   text-align: justify;
 }
-
-
 
 /* Qoutes */
 
@@ -108,18 +106,15 @@ main{
 }
 
 
-
 #cards {
-  margin-top: 5%;
-  /* height: 250px; */
+  margin: 2% 0;
   height: 100%;
   background-color: #EAEFF0;
-  /* background: rgb(134, 96, 86); */
-  border-radius: 100px;
+  border-radius: 50px;
 }
 
 #cards h2 {
-  padding: 5% 0;
+  padding: 2% 0;
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
@@ -130,9 +125,9 @@ main{
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   width: 11%;
-  /* position: relative; */
+  position: relative;
   margin:0.5%;
-  /* left: 2%; */
+  left: 2%;
   display: inline-block;
   float: left;
 }
@@ -141,16 +136,18 @@ main{
   box-shadow: 0 15px 25px 0 rgba(0,0,0,0.8);
 }
 .container {
-  padding: 2px 16px;
+  padding: 2px 2px;
   background: #fcedd8;
   /* color:  rgb(134, 96, 86); */
 }
 .container h4{
+  margin-top: 10px;
   font-size: 12px;
   font-weight: bolder;
+  padding: 0.2em;
 }
 .container p{
   font-size: 10px;
+  padding: 0.2em;
 }
-
 
