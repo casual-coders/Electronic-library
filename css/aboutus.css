@@ -1,0 +1,174 @@
+.teamMember {
+    width:250px;
+    font-size:16px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+
+    display: inline-block;
+}
+.aboutTeamMember {
+    border-top:1px solid black;
+    padding-top: 15px;
+}
+
+.teamMember h2 ,.teamMember h3 {
+    line-height: 25px;
+}
+.teamMember h3 {
+    font-weight: normal;
+    font-size: 1.0em;
+    margin-bottom: 11px;
+}
+
+.teamMember h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.teamMember span {
+    font-weight: bold;
+}
+
+.teamMember {
+    height: 331px;
+    position: relative;
+    overflow: hidden;
+    /* transition: opacity 1s; */
+
+    margin:40px 30px;
+
+    
+}
+
+/**************************/
+.teamMember .card {
+    /* overflow: visible;
+    opacity:0.1; */
+    position: absolute;
+    top:initial;
+    background-color: whitesmoke;
+    height: 478px;
+    opacity:0.9;
+    /* border:1px solid black; */
+
+    transition :transform 0.5s;
+    transition-timing-function: linear;
+}
+
+.teamMember:hover .card{
+    transform :translateY(-270px);
+}
+/**************************/
+
+.teamMember img {
+    width:250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+main #wrapper {
+    /* width:90%; */
+    text-align: center;
+    margin: 30px auto 0 auto;
+}
+.teamMember p {
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+.memberIcons {
+    border-top: 1px solid gray;
+    padding-top: 15px;
+}
+.memberIcons a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    background-color: #565e62;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 25px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+main h2 {
+
+}
+
+main section {
+    background-color: initial;
+    text-decoration: initial;
+    font-family: Arial;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: initial;
+}
+
+footer {
+    margin-top:50px;
+}
+
+main section:nth-child(1) {
+    line-height: 30px;
+    padding: 95px 20px 70px 20px;
+    display: inline-block;
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+    height: 635px;
+}
+
+main {
+    text-align: center;
+}
+
+main section:nth-child(1) p {
+    display: inline-block;
+    float: left;
+    width: 82%;
+    padding:0 20px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+}
+main section:nth-child(1) p span.i{
+    font-style: italic;
+}
+#aboutUsHeading {
+    display: inline-block;
+    float: left;
+    font-size: 100px;
+    color: brown;
+    line-height: 100px;
+    background-color: #e7e7e7;
+    height: 100%;
+    padding: 20px;
+}
+
+#meetOurTeamHeading {
+    color: brown;
+    font-size: 50px;
+ 
+    font-weight: bold;
+    background-color: whitesmoke;
+    display:inline;
+    padding:0 20px;
+}
+
+main section hr {
+    border-top: 1px solid brown;
+    position: relative;
+    top: 30px;
+    z-index:-1;
+}
+main section span.title {
+    color:lightseagreen;
+    font-weight: 700;
+}
+
+main section span.b {
+    font-weight: 700;
+}
