@@ -11,11 +11,11 @@ main{
   margin-top: 5%;
   margin-bottom: 3%;
   background-color: #EAEFF0;
-  /* padding: 2.5%; */
+  padding: 2.5%;
   border-radius: 100px;
 }
 
-#home .right-home {
+/* #home .right-home {
   float: right;
   width: 45%;
   min-height: 100%;
@@ -26,31 +26,30 @@ main{
   margin: auto;
   width: 80%;
   border-radius: 50%;
-}
+} */
 
 #home .left-home {
   float: left;
-  width: 55%;
   min-height: 100%;
 }
 
 .one {
-  /* margin-top: 0.7em; */
+  margin: 0.7em 0;
   font-size: 40px;
   line-height: 1.2;
   color: #567D87 ;
 }
 
 .two{
-  margin-top: 0.7em;
+  margin-top: 0.7em 0;
   font-size: 40px;
   line-height: 1.2;
   color: #161f22 ;
 }
 #home .left-home p {
-  margin: 10px 0;
+  margin: 20px 0;
   padding-top: 20px;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   font-weight: normal;
   font-size: .9em;
   color: #161F22;
