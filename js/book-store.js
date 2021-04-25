@@ -45,16 +45,18 @@ books();
 
 
 localStorageGet();
-let arr=[];
+let arr;
 function renderBooks() {
+  outerContainer = document.getElementById('div');
 
-  while (cardsBox.firstChild) {
-    cardsBox.removeChild(cardsBox.firstChild);
+  while (outerContainer.firstChild) {
+    outerContainer.removeChild(outerContainer.firstChild);
   }
 
-  for (let i = 0 ; i < allBooks.length; i++) {
 
-    outerContainer = document.getElementById('div');
+  for (let i = 0 ; i < allBooks.length; i++) {
+ 
+
     div2 = document.createElement('div');
     div2.setAttribute('class','book');
     outerContainer.appendChild(div2);
@@ -95,12 +97,11 @@ function renderBooks() {
     bookName.textContent=`${allBooks[i].bookName}`;
     div2.appendChild(bookName);
 
-    arr.push(bookName);
-
+  }
 
 
   }
-}
+
 
 renderBooks();
 
@@ -153,6 +154,11 @@ document.getElementById('cat').onchange = function select() {
       div9.setAttribute('class','page page-5');
       div3.appendChild(div9);
 
+      bookName=document.createElement('p');
+      bookName.textContent=`${allBooks[i].bookName}`;
+      div2.appendChild(bookName);
+
+
 
       // available= document.createElement('p');
       // innerContainer.appendChild(available);
@@ -179,18 +185,18 @@ document.getElementById('cat').onchange = function select() {
 
 
 
-div2.addEventListener('click',navigate);
+// div2.addEventListener('click',navigate);
 
-function navigate(event) {
-  console.log(event);
-  for (let i = 0; i < allBooks.length; i++) {
-    if (bookName === allBooks[i].bookName) {
-      localStorage.setItem('pressed',JSON.stringify(allBooks[i]));
-    }
-  }
+// function navigate(event) {
+//   console.log(event);
+//   for (let i = 0; i < allBooks.length; i++) {
+//     if (bookName === allBooks[i].bookName) {
+//       localStorage.setItem('pressed',JSON.stringify(allBooks[i]));
+//     }
+//   }
 
-  window.location.href = 'https://www.w3schools.com/howto/howto_css_zoom_hover.asp';
-}
+//   window.location.href = 'https://www.w3schools.com/howto/howto_css_zoom_hover.asp';
+// }
 
 
 
@@ -208,19 +214,21 @@ function handleSubmitting(event) {
     if (allBooks[i].bookName.toLowerCase() === bName.toLowerCase()) {
       if (allBooks[i].availability === true) {
         allBooks[i].availability=false;
-        alert(`${userName} you ordered ${bName} book, it will be delivered as soon as possible to: ${location}`);
+        swal('Succesfully !', `${userName} you ordered ${bName} book, it will be delivered as soon as possible to: ${location}`,'success');
+        // alert(`${userName} you ordered ${bName} book, it will be delivered as soon as possible to: ${location}`);
         break;
       }else if (allBooks[i].availability === false) {
-        alert(`${userName} sorry ${bName} book, is unavailable`);
+        swal('Sorry!', `${userName} sorry ${bName} book, is unavailable`,'error');
+        // alert(`${userName} sorry ${bName} book, is unavailable`);
         break;
       }
+      // localStorage.setItem('availablility',JSON.stringify(allBooks));
 
 
     }
-
+    // arr.push(allBooks[i]);
   }
-
-  renderBooks();
+  // localStorageSet();
 }
 
 
@@ -228,8 +236,7 @@ function handleSubmitting(event) {
 
 
 function localStorageSet() {
-  localStorage.clear();
-  localStorage.setItem('Book',JSON.stringify(allBooks));
+  localStorage.setItem('available',JSON.stringify(allBooks));
 }
 
 
@@ -239,6 +246,10 @@ function localStorageSet() {
 function localStorageGet() {
   let data = localStorage.getItem('Book');
   let dataParsed = JSON.parse(data);
+
+  // let availData = localStorage.getItem('available');
+  // availParsed = JSON.parse(availData);
+
   if (dataParsed) {
     for (let i = 0; i < dataParsed.length; i++) {
       allBooks.push(dataParsed[i]);
@@ -255,6 +266,3 @@ function localStorageGet() {
 
 
 
-
-
-$.MessageBox('A plain MessageBox can replace Javascript\'s window.alert(), and it looks definitely better...');

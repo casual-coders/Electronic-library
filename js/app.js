@@ -17,6 +17,7 @@ let div6;
 let div7;
 let div8;
 let div9;
+let bookName;
 
 let allBooks=[];
 function Book(bName,path,category,discription) {
@@ -106,6 +107,10 @@ function renderBooks() {
     div9.setAttribute('class','page page-5');
     div3.appendChild(div9);
 
+    bookName=document.createElement('p');
+    bookName.textContent=`${allBooks[i].bookName}`;
+    div2.appendChild(bookName);
+
   }
 }
 
@@ -119,10 +124,10 @@ renderBooks();
 // taking info from user
 
 form.addEventListener('submit',handleSubmitting);
-let count=0;
+let count= allBooks.length ;
 function handleSubmitting(event) {
 
-  // event.preventDefault();
+  event.preventDefault();
   let bName = event.target.name.value;
   let path = event.target.image.value;
   let discription = event.target.disc.value;
@@ -167,9 +172,13 @@ function handleSubmitting(event) {
   div9.setAttribute('class','page page-5');
   div3.appendChild(div9);
 
+  bookName=document.createElement('p');
+  bookName.textContent=`${allBooks[count].bookName}`;
+  div2.appendChild(bookName);
+
   count++;
   localStorageSet();
-
+  swal('Succesfully !', 'thank you','success');
 }
 
 
