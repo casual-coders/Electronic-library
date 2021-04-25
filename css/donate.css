@@ -1,63 +1,83 @@
+
+
+body{
+  background-color: whitesmoke;
+}
 main{
-  position: relative;
-  margin-top: 5%;
-  margin-left: 2%;
-  margin-right: 2%;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
 
+}
 
+main {
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 #userEnter{
-  position: relative;
-  left: 35%;
-  width: 30%;
-  padding: 40px;
-  background: rgba(58, 48, 45, 0.8);
-  box-sizing: border-box;
-  box-shadow: 0 15px 25px rgba(0,0,0,.6);
-  border-radius: 10px;
+
+    /* position: relative;
+    left: 35%;
+    width: 30%;
+    padding: 40px;
+    background: #e7e7e7;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px; */
 }
 
 #cat{
-  margin-bottom: 2%;
-  margin-left: 17%;
-  padding: 1%;
-}
+    margin-top: 2%;
+    /* margin-left: 17%; */
+    padding: 1%;
+    width: 90%;
+  }
 #name{
-  margin-bottom: 2%;
-  margin-left: 25%;
-  padding: 1%;
-}
+    margin-top: 2%;
+    /* margin-left: 25%; */
+    padding: 1%;
+    width: 90%;
+  }
 #image{
-  margin-bottom: 2%;
-  margin-left: 4%;
-  padding: 1%;
-}
+    margin-top: 2%;
+    /* margin-left: 4%; */
+    padding: 1%;
+    width: 90%;
+  }
 
 #disc{
-  width: 90%;
-  margin-left: 5%;
-  padding: 1%;
-  margin-top: 2%;
-}
-
-
+    width: 90%;
+    /* margin-left: 5%; */
+    padding: 1%;
+    margin-top: 2%;
+  }
 
 input[type=submit]{
-  background-color: #333;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin-top: 30px;
-  cursor: pointer;
-  float: right;
-}
+
+    background-color: #636262;
+    background-color: #009688;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.2em;
+    /* float: right; */
+  }
 
 input[type=submit]:hover{
-  cursor: pointer;
-  box-shadow: 0 15px 25px 0 rgba(0,0,0,1);
-}
+    cursor: pointer;
+    box-shadow: 0 15px 25px 0 rgba(0,0,0,1);
+    box-shadow:1px 1px 5px 1px grey;
+    background-color: #333;
+    background-color: #02776c;
+    border-radius: 5px;
+  }
 
 .card {
   margin-top: 5%;
@@ -89,7 +109,76 @@ input[type=submit]:hover{
 
 
 .card img{
-  height: 15em;
-  width: 100%;
+
+    height: 15em;
+    width: 100%;
 }
   
+#formSide, #form {
+    display: inline-block;
+    font-size: initial;
+    height: 100%;
+    float: left;
+    padding: 20px;
+}
+/* 
+#formSide {
+  height: 100%;
+  background-position: 0 260px;
+  background-repeat: no-repeat;
+  background-size: 300px;
+  font-size: 50px;
+  color: brown;
+  border-radius: 10px 0 0 10px;
+} */
+
+#form {
+  background-color: #eee;
+  border-radius: 10px;
+}
+
+#wrapper2{
+  font-size: 0;
+  background-color: #e7e7e7;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  box-shadow:1px 1px 5px 1px grey;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+#form p {
+  font-style: italic;
+  font-size: 18px;
+  color: white;
+  background-color: #009688;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#form label {
+  display: block;
+  margin: 0 auto;
+  margin-top:5%;
+  font-size: 1.2em;
+  font-weight: 500;
+  width:90%;
+  text-align: left;
+}
+
+#cards {
+  text-align: initial;
+  background-color: #eee;
+  border-radius: 50px;
+  padding: 3%;
+  margin-top: 7%;
+}
+
+
+#donatedBooksHeading {
+  color:rgb(107 122 130);
+  font-size: 35px;
+  padding:0 20px;
+  text-align: center;
+}
