@@ -127,4 +127,3 @@ function localStorageGet() {
     allBooks=dataParsed;
   }
 }
-©
