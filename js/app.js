@@ -9,6 +9,14 @@ let innerContainer;
 let book;
 let cat;
 let disc;
+let div2;
+let div3;
+let div4;
+let div5;
+let div6;
+let div7;
+let div8;
+let div9;
 
 let allBooks=[];
 function Book(bName,path,category,discription) {
@@ -25,38 +33,82 @@ function Book(bName,path,category,discription) {
 
 localStorageGet();
 
-function renderBooks() {
+// function renderBooks() {
 
+//   for (let i = 0 ; i < allBooks.length; i++) {
+
+//     outerContainer = document.createElement('div');
+//     outerContainer.setAttribute('class','card');
+//     cardsBox.appendChild(outerContainer);
+
+//     img = document.createElement('img');
+//     img.setAttribute('src',allBooks[i].path);
+//     outerContainer.appendChild(img);
+
+//     innerContainer = document.createElement('div');
+//     innerContainer.setAttribute('class','container');
+//     outerContainer.appendChild(innerContainer);
+
+//     book = document.createElement('h4');
+//     innerContainer.appendChild(book);
+//     book.textContent=`Book Name: ${allBooks[i].bookName}`;
+
+
+//     cat= document.createElement('p');
+//     innerContainer.appendChild(cat);
+//     cat.textContent=`category: ${allBooks[i].category}`;
+
+
+//     disc= document.createElement('p');
+//     innerContainer.appendChild(disc);
+//     disc.textContent=`Discription: ${allBooks[i].discription}`;
+//   }
+
+// }
+
+function renderBooks() {
   for (let i = 0 ; i < allBooks.length; i++) {
 
-    outerContainer = document.createElement('div');
-    outerContainer.setAttribute('class','card');
-    cardsBox.appendChild(outerContainer);
+    outerContainer = document.getElementById('div');
+    div2 = document.createElement('div');
+    div2.setAttribute('class','book');
+    outerContainer.appendChild(div2);
+
+    div3 = document.createElement('div');
+    div3.setAttribute('class','inner-book');
+    div2.appendChild(div3);
+
+    div4 = document.createElement('div');
+    div4.setAttribute('class','img');
+    div3.appendChild(div4);
 
     img = document.createElement('img');
     img.setAttribute('src',allBooks[i].path);
-    outerContainer.appendChild(img);
+    div4.appendChild(img);
 
-    innerContainer = document.createElement('div');
-    innerContainer.setAttribute('class','container');
-    outerContainer.appendChild(innerContainer);
+    div5 = document.createElement('div');
+    div5.setAttribute('class','page');
+    div3.appendChild(div5);
 
-    book = document.createElement('h4');
-    innerContainer.appendChild(book);
-    book.textContent=`Book Name: ${allBooks[i].bookName}`;
+    div6 = document.createElement('div');
+    div6.setAttribute('class','page page-2');
+    div3.appendChild(div6);
 
+    div7 = document.createElement('div');
+    div7.setAttribute('class','page page-3');
+    div3.appendChild(div7);
 
-    cat= document.createElement('p');
-    innerContainer.appendChild(cat);
-    cat.textContent=`category: ${allBooks[i].category}`;
+    div8 = document.createElement('div');
+    div8.setAttribute('class','page page-4');
+    div3.appendChild(div8);
 
+    div9 = document.createElement('div');
+    div9.setAttribute('class','page page-5');
+    div3.appendChild(div9);
 
-    disc= document.createElement('p');
-    innerContainer.appendChild(disc);
-    disc.textContent=`Discription: ${allBooks[i].discription}`;
   }
-
 }
+
 
 renderBooks();
 
@@ -78,31 +130,42 @@ function handleSubmitting(event) {
 
   new Book(bName,path,category,discription);
 
-  outerContainer = document.createElement('div');
-  outerContainer.setAttribute('class','card');
-  cardsBox.appendChild(outerContainer);
+  outerContainer = document.getElementById('div');
+  div2 = document.createElement('div');
+  div2.setAttribute('class','book');
+  outerContainer.appendChild(div2);
+
+  div3 = document.createElement('div');
+  div3.setAttribute('class','inner-book');
+  div2.appendChild(div3);
+
+  div4 = document.createElement('div');
+  div4.setAttribute('class','img');
+  div3.appendChild(div4);
 
   img = document.createElement('img');
   img.setAttribute('src',allBooks[count].path);
-  outerContainer.appendChild(img);
+  div4.appendChild(img);
 
-  innerContainer = document.createElement('div');
-  innerContainer.setAttribute('class','container');
-  outerContainer.appendChild(innerContainer);
+  div5 = document.createElement('div');
+  div5.setAttribute('class','page');
+  div3.appendChild(div5);
 
-  book = document.createElement('h4');
-  innerContainer.appendChild(book);
-  book.textContent=`Book Name: ${allBooks[count].bookName}`;
+  div6 = document.createElement('div');
+  div6.setAttribute('class','page page-2');
+  div3.appendChild(div6);
 
+  div7 = document.createElement('div');
+  div7.setAttribute('class','page page-3');
+  div3.appendChild(div7);
 
-  cat= document.createElement('p');
-  innerContainer.appendChild(cat);
-  cat.textContent=`category: ${allBooks[count].category}`;
+  div8 = document.createElement('div');
+  div8.setAttribute('class','page page-4');
+  div3.appendChild(div8);
 
-
-  disc= document.createElement('p');
-  innerContainer.appendChild(disc);
-  disc.textContent=`Discription: ${allBooks[count].discription}`;
+  div9 = document.createElement('div');
+  div9.setAttribute('class','page page-5');
+  div3.appendChild(div9);
 
   count++;
   localStorageSet();

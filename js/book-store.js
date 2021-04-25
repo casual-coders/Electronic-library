@@ -9,6 +9,15 @@ let book;
 let cat;
 let disc;
 let available;
+let div2;
+let div3;
+let div4;
+let div5;
+let div6;
+let div7;
+let div8;
+let div9;
+let bookName;
 
 let allBooks=[];
 function Book(bName,path,category,discription) {
@@ -36,7 +45,7 @@ books();
 
 
 localStorageGet();
-
+let arr=[];
 function renderBooks() {
 
   while (cardsBox.firstChild) {
@@ -45,39 +54,52 @@ function renderBooks() {
 
   for (let i = 0 ; i < allBooks.length; i++) {
 
-    outerContainer = document.createElement('div');
-    outerContainer.setAttribute('class','card');
-    cardsBox.appendChild(outerContainer);
+    outerContainer = document.getElementById('div');
+    div2 = document.createElement('div');
+    div2.setAttribute('class','book');
+    outerContainer.appendChild(div2);
+
+    div3 = document.createElement('div');
+    div3.setAttribute('class','inner-book');
+    div2.appendChild(div3);
+
+    div4 = document.createElement('div');
+    div4.setAttribute('class','img');
+    div3.appendChild(div4);
 
     img = document.createElement('img');
     img.setAttribute('src',allBooks[i].path);
-    outerContainer.appendChild(img);
+    div4.appendChild(img);
 
-    innerContainer = document.createElement('div');
-    innerContainer.setAttribute('class','container');
-    outerContainer.appendChild(innerContainer);
+    div5 = document.createElement('div');
+    div5.setAttribute('class','page');
+    div3.appendChild(div5);
 
-    book = document.createElement('h4');
-    innerContainer.appendChild(book);
-    book.textContent=`Book Name: ${allBooks[i].bookName}`;
+    div6 = document.createElement('div');
+    div6.setAttribute('class','page page-2');
+    div3.appendChild(div6);
+
+    div7 = document.createElement('div');
+    div7.setAttribute('class','page page-3');
+    div3.appendChild(div7);
+
+    div8 = document.createElement('div');
+    div8.setAttribute('class','page page-4');
+    div3.appendChild(div8);
+
+    div9 = document.createElement('div');
+    div9.setAttribute('class','page page-5');
+    div3.appendChild(div9);
+
+    bookName=document.createElement('p');
+    bookName.textContent=`${allBooks[i].bookName}`;
+    div2.appendChild(bookName);
+
+    arr.push(bookName);
 
 
-    cat= document.createElement('p');
-    innerContainer.appendChild(cat);
-    cat.textContent=`category: ${allBooks[i].category}`;
 
-    available= document.createElement('p');
-    innerContainer.appendChild(available);
-    if (allBooks[i].availability === true) {
-      available.textContent='status: available';
-    }else if (allBooks[i].availability === false) {
-      available.textContent='status: unavailable';
-    }
-    disc= document.createElement('p');
-    innerContainer.appendChild(disc);
-    disc.textContent=`Discription: ${allBooks[i].discription}`;
   }
-
 }
 
 renderBooks();
@@ -87,45 +109,63 @@ renderBooks();
 
 document.getElementById('cat').onchange = function select() {
   let selected = document.getElementById('cat').value;
-  while (cardsBox.firstChild) {
-    cardsBox.removeChild(cardsBox.firstChild);
+  while (outerContainer.firstChild) {
+    outerContainer.removeChild(outerContainer.firstChild);
   }
 
   for (let i = 0; i < allBooks.length; i++) {
     if (allBooks[i].category === selected) {
-      outerContainer = document.createElement('div');
-      outerContainer.setAttribute('class','card');
-      cardsBox.appendChild(outerContainer);
+
+      outerContainer = document.getElementById('div');
+      div2 = document.createElement('div');
+      div2.setAttribute('class','book');
+      outerContainer.appendChild(div2);
+
+      div3 = document.createElement('div');
+      div3.setAttribute('class','inner-book');
+      div2.appendChild(div3);
+
+      div4 = document.createElement('div');
+      div4.setAttribute('class','img');
+      div3.appendChild(div4);
 
       img = document.createElement('img');
       img.setAttribute('src',allBooks[i].path);
-      outerContainer.appendChild(img);
+      div4.appendChild(img);
 
-      innerContainer = document.createElement('div');
-      innerContainer.setAttribute('class','container');
-      outerContainer.appendChild(innerContainer);
+      div5 = document.createElement('div');
+      div5.setAttribute('class','page');
+      div3.appendChild(div5);
 
-      book = document.createElement('h4');
-      innerContainer.appendChild(book);
-      book.textContent=`Book Name: ${allBooks[i].bookName}`;
+      div6 = document.createElement('div');
+      div6.setAttribute('class','page page-2');
+      div3.appendChild(div6);
+
+      div7 = document.createElement('div');
+      div7.setAttribute('class','page page-3');
+      div3.appendChild(div7);
+
+      div8 = document.createElement('div');
+      div8.setAttribute('class','page page-4');
+      div3.appendChild(div8);
+
+      div9 = document.createElement('div');
+      div9.setAttribute('class','page page-5');
+      div3.appendChild(div9);
 
 
-      cat= document.createElement('p');
-      innerContainer.appendChild(cat);
-      cat.textContent=`category: ${allBooks[i].category}`;
-
-      available= document.createElement('p');
-      innerContainer.appendChild(available);
-      if (allBooks[i].availability === true) {
-        available.textContent='status: available';
-      }else if (allBooks[i].availability === false) {
-        available.textContent='status: unavailable';
-      }
+      // available= document.createElement('p');
+      // innerContainer.appendChild(available);
+      // if (allBooks[i].availability === true) {
+      //   available.textContent='status: available';
+      // }else if (allBooks[i].availability === false) {
+      //   available.textContent='status: unavailable';
+      // }
 
 
-      disc= document.createElement('p');
-      innerContainer.appendChild(disc);
-      disc.textContent=`Discription: ${allBooks[i].discription}`;
+      // disc= document.createElement('p');
+      // innerContainer.appendChild(disc);
+      // disc.textContent=`Discription: ${allBooks[i].discription}`;
     }
   }
   if(selected === 'All'){
@@ -135,10 +175,30 @@ document.getElementById('cat').onchange = function select() {
 
 
 
+
+
+
+
+div2.addEventListener('click',navigate);
+
+function navigate(event) {
+  console.log(event);
+  for (let i = 0; i < allBooks.length; i++) {
+    if (bookName === allBooks[i].bookName) {
+      localStorage.setItem('pressed',JSON.stringify(allBooks[i]));
+    }
+  }
+
+  window.location.href = 'https://www.w3schools.com/howto/howto_css_zoom_hover.asp';
+}
+
+
+
 // taking info from user
 
 form.addEventListener('submit',handleSubmitting);
 function handleSubmitting(event) {
+
   console.log(event);
   event.preventDefault();
   let bName = event.target.book.value;
@@ -167,10 +227,10 @@ function handleSubmitting(event) {
 
 
 
-// function localStorageSet() {
-//     localStorage.clear();
-//     localStorage.setItem('Book',JSON.stringify(allBooks));
-//   }
+function localStorageSet() {
+  localStorage.clear();
+  localStorage.setItem('Book',JSON.stringify(allBooks));
+}
 
 
 
@@ -186,3 +246,15 @@ function localStorageGet() {
   }
   console.log(allBooks);
 }
+
+
+
+
+
+
+
+
+
+
+
+$.MessageBox('A plain MessageBox can replace Javascript\'s window.alert(), and it looks definitely better...');
