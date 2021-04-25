@@ -128,4 +128,3 @@ function localStorageGet() {
     allBooks=dataParsed;
   }
 }
-
