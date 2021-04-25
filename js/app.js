@@ -69,7 +69,7 @@ form.addEventListener('submit',handleSubmitting);
 let count=0;
 function handleSubmitting(event) {
 
-  event.preventDefault();
+  // event.preventDefault();
   let bName = event.target.name.value;
   let path = event.target.image.value;
   let discription = event.target.disc.value;
