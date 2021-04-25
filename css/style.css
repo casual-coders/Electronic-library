@@ -72,6 +72,7 @@ main{
   font-size: x-large;
   padding:20px 0;
   font-weight: bolder;
+  text-decoration: none;
 }
 #Qoutes .quote {
   padding: 10px;
