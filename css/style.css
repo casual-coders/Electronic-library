@@ -8,9 +8,10 @@ main{
 }
 
 #home{
-  margin: 2% 0;
+  margin-top: 5%;
+  margin-bottom: 3%;
   background-color: #EAEFF0;
-  padding: 2.5%;
+  /* padding: 2.5%; */
   border-radius: 100px;
 }
 
@@ -34,7 +35,7 @@ main{
 }
 
 .one {
-  margin-top: 0.7em;
+  /* margin-top: 0.7em; */
   font-size: 40px;
   line-height: 1.2;
   color: #567D87 ;
