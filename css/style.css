@@ -164,3 +164,51 @@ position: absolute;
     height: 100%;
     width: 80%;
 }
+
+#nyTimes {
+  height: 100%;
+  margin: 1% 0;
+  opacity: 0.9;
+  /* background: url(https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center/cover; */
+  padding: 50px 0;
+  /* border-radius: 100px; */
+  float: left;
+  width: 50%;
+  /* background-color: #EAEFF0; */
+}
+
+#nyTimes h2 {
+  text-align: left;
+  margin-left: 15px;
+  font-size: x-large;
+  padding: 20px 0;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+#nyTimes h3 {
+  text-align: left;
+  margin-left: 20px;
+  font-size: smaller;
+  /* padding: 20px 0; */
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+#nyTimes p {
+  display: inline-block;
+  width: 85%;
+  text-align: justify;
+  margin-left: 20px;
+  margin-bottom:20px;
+  line-height: 1.5;
+}
+
+#nyTimes a {
+  font-style: italic;
+  color: #2196f3;
+}
+#nyTimes span {
+  font-style: italic;
+  font-weight: lighter;
+}
