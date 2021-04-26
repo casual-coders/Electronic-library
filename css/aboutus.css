@@ -50,17 +50,18 @@ body{
     opacity:0.1; */
     position: absolute;
     top:initial;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     height: 478px;
     opacity:0.9;
     /* border:1px solid black; */
 
-    transition :transform 0.5s;
+    transition :transform 0.5s,background-color 0.2s;
     transition-timing-function: linear;
 }
 
 .teamMember:hover .card{
     transform :translateY(-270px);
+    background-color: whitesmoke;
 }
 /**************************/
 
@@ -74,7 +75,12 @@ main #wrapper {
     /* width:90%; */
     text-align: center;
     margin: 30px auto 0 auto;
+    background-image: repeating-linear-gradient(135deg,#f5f0ce,white 50%);
+    width: 87%;
+    border-radius: 30px;
+    padding-top: 30px;
 }
+
 .teamMember p {
     line-height: 25px;
     margin-bottom: 15px;
@@ -122,7 +128,7 @@ main section:nth-child(1) {
     width: 90%;
     margin: 0 auto;
     text-align: justify;
-    height: 635px;
+    height: 679px;
 }
 
 main {
@@ -136,6 +142,7 @@ main section:nth-child(1) p {
     padding:0 20px;
     font-family: 'Josefin Slab', serif;
     font-weight: 600;
+    padding: 20px;
 }
 main section:nth-child(1) p span.i{
     font-style: italic;
@@ -149,19 +156,19 @@ main section:nth-child(1) p span.i{
     background-color: #e7e7e7;
     height: 100%;
     padding: 20px;
+    border-radius: 30px 0 0 30px;
 }
 
 #meetOurTeamHeading {
     color: brown;
-    font-size: 50px;
+    font-size: 40px;
  
     font-weight: bold;
-    background-color: whitesmoke;
-    display:inline;
     padding:0 20px;
+    
 }
 
-main section hr {
+main section div hr {
     border-top: 1px solid brown;
     position: relative;
     top: 30px;
@@ -174,4 +181,29 @@ main section span.title {
 
 main section span.b {
     font-weight: 700;
+}
+
+.background-3 {
+ 
+    border-radius: 0 30px 30px 0;
+    background-image: linear-gradient(#8b9da9, #fff6e4);
+    /* box-shadow: inset 0 0 100px hsl(0deg 0% 0% / 30%); */
+    /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, #DAD4DC, #FFF9F6, #D3DAD9, #FCFDF4); */
+    background: linear-gradient(-45deg, #E1B4ED, #FFD8C0, #B2ECDF, #F8FEBF);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+}
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

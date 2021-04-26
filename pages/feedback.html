@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/donate.css">
+    <link rel="stylesheet" href="../css/feedback.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <title>Donation</title>
+    <title>Book Feedback</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         <div class="overlay">
             <div id="logo">
                 <img src="https://www.flaticon.com/premium-icon/icons/svg/3145/3145915.svg" alt="">
-                <h1>Donate book</h1>
+                <h1>Book Feedback</h1>
             </div>
             <h3>A room without books is like a body without a soul</h3>
             <!-- <p>Our mission is to create opportunities for everyone by being Innovative, Dynamic, Responsible, Caring, Creative and by Constantly evolving to provide global technology services to our reader. We, Electric Shelves strive to provide an environment that promotes healthy holistic development to Our reader.</p> -->
@@ -27,6 +27,7 @@
             <button><a href="../index.html" target="_blank">HOME</a></button>
             <button><a href="Book-store.html" target="_blank">Borrow</a></button>
             <button><a href="Donate-book.html" target="_blank">Donate books</a></button>
+            <button><a href="feedback.html" target="_blank">Book Feedback</a></button>
             <button><a href="aboutUs.html" target="_blank">About Us</a></button>
 
 
@@ -35,41 +36,76 @@
     </header>
     <main>
 
-    
-
 
         <div id="wrapper2">
             <!-- <div id="formSide">Donate <br> a Book</div> -->
             <div id="form">
-                <p>To donate your book please fill in the following form</p>
-                <form action="" id="userEnter">
+                <p>To write a feedback on a book please fill in the following form</p>
+                <form action="" id="userFeedback">
                     <fieldset>
-                        <label for="cat">Book Category</label>
+                        <!-- <label for="cat">Book Category</label>
                         <select name="category" id="cat">
                             <option value="medical">Medical Books</option>
                             <option value="engineering">Engineering Books</option>
                             <option value="Cumputer">Computer and Programming</option>
                             <option value="other">Other</option>
                         </select>
+                        <br> -->
+                        <label for="name">Book Name</label>
+
+
+
+
+                        <select name="index" id="index">
+
+                            <!-- <option value="First Book">First Book</option>
+
+                            <option value="Second Book">Second Book</option>
+                            <option value="Third Book">Third Book</option>
+                            <option value="Fourth Book">Fourth Book</option>
+                            <option value="Fifth Book">Fifth Book</option> -->
+
+
+                        </select>
+
                         <br>
-                        <label for="name">Book Title</label>
-                        <input type="text" id="name" placeholder="Book Title ..." required>
+                        <label for="rate">Rate</label>
+
+                        <select name="rate" id="rate">
+
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+
+                        </select>
+
                         <br>
-                        <label for="Image">Book Image Link</label>
-                        <input type="text" id="image" placeholder="Book Image Link ..." required>
+                        <label for="feedback">Your Feedback </label>
+                        <textarea name="feedback" rows="10" cols="30" id="feedback" required></textarea>
                         <br>
-                        <label for="disc">Book Description</label>
-                        <textarea name="message" rows="10" cols="30" id="disc" placeholder="Book Description ..." required></textarea>
-                        <br>
-                        <input type="submit" value="Donate">
+                        <input type="submit" value="Submit">
                     </fieldset>
                 </form>
             </div>
         </div>
 
-     
-        <div id="cards">
-            <h2 id="donatedBooksHeading">Donated Books</h2>
+
+        <div id="reviews">
+            <h2 id="reviewsHeading">Feedback On Books </h2>
+            <ul id="feedbackList">
+                <!-- <li>
+                    <img src="https://m.media-amazon.com/images/I/813Q-agTNKL._AC_UL480_FMwebp_QL65_.jpg" alt="">
+                    <h3>Harry Potter</h3>
+                    <i ></i>
+                    <i class="fas fa-star gold"></i>
+                    <i class="fas fa-star gold"></i>
+                    <i class="fas fa-star gray"></i>
+                    <i class="fas fa-star gray"></i>
+                    <p>Awsome</p>                  
+                </li> -->
+            </ul>
         </div>
 
     </main>
@@ -114,7 +150,7 @@
         </div>
     </footer>
 
-    <script src="../js/app.js"></script>
+    <script src="../js/feedback.js"></script>
 </body>
 
 </html>
