@@ -9,6 +9,15 @@ let book;
 let cat;
 let disc;
 let available;
+let div2;
+let div3;
+let div4;
+let div5;
+let div6;
+let div7;
+let div8;
+let div9;
+let bookName;
 
 let allBooks=[];
 function Book(bName,path,category,discription) {
@@ -36,49 +45,63 @@ books();
 
 
 localStorageGet();
-
+let arr;
 function renderBooks() {
+  outerContainer = document.getElementById('div');
 
-  while (cardsBox.firstChild) {
-    cardsBox.removeChild(cardsBox.firstChild);
+  while (outerContainer.firstChild) {
+    outerContainer.removeChild(outerContainer.firstChild);
   }
 
-  for (let i = 0 ; i < allBooks.length; i++) {
 
-    outerContainer = document.createElement('div');
-    outerContainer.setAttribute('class','card');
-    cardsBox.appendChild(outerContainer);
+  for (let i = 0 ; i < allBooks.length; i++) {
+ 
+
+    div2 = document.createElement('div');
+    div2.setAttribute('class','book');
+    outerContainer.appendChild(div2);
+
+    div3 = document.createElement('div');
+    div3.setAttribute('class','inner-book');
+    div2.appendChild(div3);
+
+    div4 = document.createElement('div');
+    div4.setAttribute('class','img');
+    div3.appendChild(div4);
 
     img = document.createElement('img');
     img.setAttribute('src',allBooks[i].path);
-    outerContainer.appendChild(img);
+    div4.appendChild(img);
 
-    innerContainer = document.createElement('div');
-    innerContainer.setAttribute('class','container');
-    outerContainer.appendChild(innerContainer);
+    div5 = document.createElement('div');
+    div5.setAttribute('class','page');
+    div3.appendChild(div5);
 
-    book = document.createElement('h4');
-    innerContainer.appendChild(book);
-    book.textContent=`Book Name: ${allBooks[i].bookName}`;
+    div6 = document.createElement('div');
+    div6.setAttribute('class','page page-2');
+    div3.appendChild(div6);
 
+    div7 = document.createElement('div');
+    div7.setAttribute('class','page page-3');
+    div3.appendChild(div7);
 
-    cat= document.createElement('p');
-    innerContainer.appendChild(cat);
-    cat.textContent=`category: ${allBooks[i].category}`;
+    div8 = document.createElement('div');
+    div8.setAttribute('class','page page-4');
+    div3.appendChild(div8);
 
-    available= document.createElement('p');
-    innerContainer.appendChild(available);
-    if (allBooks[i].availability === true) {
-      available.textContent='status: available';
-    }else if (allBooks[i].availability === false) {
-      available.textContent='status: unavailable';
-    }
-    disc= document.createElement('p');
-    innerContainer.appendChild(disc);
-    disc.textContent=`Discription: ${allBooks[i].discription}`;
+    div9 = document.createElement('div');
+    div9.setAttribute('class','page page-5');
+    div3.appendChild(div9);
+
+    bookName=document.createElement('p');
+    bookName.textContent=`${allBooks[i].bookName}`;
+    div2.appendChild(bookName);
+
   }
 
-}
+
+  }
+
 
 renderBooks();
 
@@ -87,45 +110,68 @@ renderBooks();
 
 document.getElementById('cat').onchange = function select() {
   let selected = document.getElementById('cat').value;
-  while (cardsBox.firstChild) {
-    cardsBox.removeChild(cardsBox.firstChild);
+  while (outerContainer.firstChild) {
+    outerContainer.removeChild(outerContainer.firstChild);
   }
 
   for (let i = 0; i < allBooks.length; i++) {
     if (allBooks[i].category === selected) {
-      outerContainer = document.createElement('div');
-      outerContainer.setAttribute('class','card');
-      cardsBox.appendChild(outerContainer);
+
+      outerContainer = document.getElementById('div');
+      div2 = document.createElement('div');
+      div2.setAttribute('class','book');
+      outerContainer.appendChild(div2);
+
+      div3 = document.createElement('div');
+      div3.setAttribute('class','inner-book');
+      div2.appendChild(div3);
+
+      div4 = document.createElement('div');
+      div4.setAttribute('class','img');
+      div3.appendChild(div4);
 
       img = document.createElement('img');
       img.setAttribute('src',allBooks[i].path);
-      outerContainer.appendChild(img);
+      div4.appendChild(img);
 
-      innerContainer = document.createElement('div');
-      innerContainer.setAttribute('class','container');
-      outerContainer.appendChild(innerContainer);
+      div5 = document.createElement('div');
+      div5.setAttribute('class','page');
+      div3.appendChild(div5);
 
-      book = document.createElement('h4');
-      innerContainer.appendChild(book);
-      book.textContent=`Book Name: ${allBooks[i].bookName}`;
+      div6 = document.createElement('div');
+      div6.setAttribute('class','page page-2');
+      div3.appendChild(div6);
+
+      div7 = document.createElement('div');
+      div7.setAttribute('class','page page-3');
+      div3.appendChild(div7);
+
+      div8 = document.createElement('div');
+      div8.setAttribute('class','page page-4');
+      div3.appendChild(div8);
+
+      div9 = document.createElement('div');
+      div9.setAttribute('class','page page-5');
+      div3.appendChild(div9);
+
+      bookName=document.createElement('p');
+      bookName.textContent=`${allBooks[i].bookName}`;
+      div2.appendChild(bookName);
 
 
-      cat= document.createElement('p');
-      innerContainer.appendChild(cat);
-      cat.textContent=`category: ${allBooks[i].category}`;
 
-      available= document.createElement('p');
-      innerContainer.appendChild(available);
-      if (allBooks[i].availability === true) {
-        available.textContent='status: available';
-      }else if (allBooks[i].availability === false) {
-        available.textContent='status: unavailable';
-      }
+      // available= document.createElement('p');
+      // innerContainer.appendChild(available);
+      // if (allBooks[i].availability === true) {
+      //   available.textContent='status: available';
+      // }else if (allBooks[i].availability === false) {
+      //   available.textContent='status: unavailable';
+      // }
 
 
-      disc= document.createElement('p');
-      innerContainer.appendChild(disc);
-      disc.textContent=`Discription: ${allBooks[i].discription}`;
+      // disc= document.createElement('p');
+      // innerContainer.appendChild(disc);
+      // disc.textContent=`Discription: ${allBooks[i].discription}`;
     }
   }
   if(selected === 'All'){
@@ -135,10 +181,30 @@ document.getElementById('cat').onchange = function select() {
 
 
 
+
+
+
+
+// div2.addEventListener('click',navigate);
+
+// function navigate(event) {
+//   console.log(event);
+//   for (let i = 0; i < allBooks.length; i++) {
+//     if (bookName === allBooks[i].bookName) {
+//       localStorage.setItem('pressed',JSON.stringify(allBooks[i]));
+//     }
+//   }
+
+//   window.location.href = 'https://www.w3schools.com/howto/howto_css_zoom_hover.asp';
+// }
+
+
+
 // taking info from user
 
 form.addEventListener('submit',handleSubmitting);
 function handleSubmitting(event) {
+
   console.log(event);
   event.preventDefault();
   let bName = event.target.book.value;
@@ -148,29 +214,30 @@ function handleSubmitting(event) {
     if (allBooks[i].bookName.toLowerCase() === bName.toLowerCase()) {
       if (allBooks[i].availability === true) {
         allBooks[i].availability=false;
-        alert(`${userName} you ordered ${bName} book, it will be delivered as soon as possible to: ${location}`);
+        swal('Succesfully !', `${userName} you ordered ${bName} book, it will be delivered as soon as possible to: ${location}`,'success');
+        // alert(`${userName} you ordered ${bName} book, it will be delivered as soon as possible to: ${location}`);
         break;
       }else if (allBooks[i].availability === false) {
-        alert(`${userName} sorry ${bName} book, is unavailable`);
+        swal('Sorry!', `${userName} sorry ${bName} book, is unavailable`,'error');
+        // alert(`${userName} sorry ${bName} book, is unavailable`);
         break;
       }
+      // localStorage.setItem('availablility',JSON.stringify(allBooks));
 
 
     }
-
+    // arr.push(allBooks[i]);
   }
-
-  renderBooks();
+  // localStorageSet();
 }
 
 
 
 
 
-// function localStorageSet() {
-//     localStorage.clear();
-//     localStorage.setItem('Book',JSON.stringify(allBooks));
-//   }
+function localStorageSet() {
+  localStorage.setItem('available',JSON.stringify(allBooks));
+}
 
 
 
@@ -179,6 +246,10 @@ function handleSubmitting(event) {
 function localStorageGet() {
   let data = localStorage.getItem('Book');
   let dataParsed = JSON.parse(data);
+
+  // let availData = localStorage.getItem('available');
+  // availParsed = JSON.parse(availData);
+
   if (dataParsed) {
     for (let i = 0; i < dataParsed.length; i++) {
       allBooks.push(dataParsed[i]);
@@ -186,3 +257,12 @@ function localStorageGet() {
   }
   console.log(allBooks);
 }
+
+
+
+
+
+
+
+
+
