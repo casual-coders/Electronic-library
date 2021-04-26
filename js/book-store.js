@@ -119,7 +119,7 @@ function renderBooks() {
   }
 
 
-  }
+}
 
 
 renderBooks();
@@ -271,16 +271,16 @@ function saveToLocal() {
 //   let data = localStorage.getItem('Book');
 //   let dataParsed = JSON.parse(data);
 
-  // let availData = localStorage.getItem('available');
-  // availParsed = JSON.parse(availData);
+// let availData = localStorage.getItem('available');
+// availParsed = JSON.parse(availData);
 
-  if (dataParsed) {
-    for (let i = 0; i < dataParsed.length; i++) {
-      allBooks.push(dataParsed[i]);
-    }
-  }
-  console.log(allBooks);
-}
+// if (dataParsed) {
+//   for (let i = 0; i < dataParsed.length; i++) {
+//     allBooks.push(dataParsed[i]);
+//   }
+// }
+// console.log(allBooks);
+
 
 
 
