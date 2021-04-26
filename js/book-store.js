@@ -45,13 +45,16 @@ function books() {
   new Book ('python','https://stackabuse.com/content/images/2018/01/thinklikeacomputerscientist.jpg','computer','explains how python work');
 
 }
+
+
 books();
+localStorageGetb();
+saveToLocal();
 
 
 
 
-localStorageGet();
-localStorageSet();
+// localStorageGet();
 
 function renderBooks() {
   outerContainer = document.getElementById('div');
@@ -192,6 +195,8 @@ document.getElementById('cat').onchange = function select() {
   }
   if(selected === 'All'){
     renderBooks();
+    // saveToLocal();
+
   }
 };
 
@@ -248,20 +253,23 @@ function handleSubmitting(event) {
 }
 
 
-
-
-
-function localStorageSet() {
-  localStorage.setItem('all books',JSON.stringify(allBooks));
+// to save objects in localstorage
+function saveToLocal() {
+  localStorage.setItem('LocalBook',JSON.stringify(allBooks));
 }
 
 
+// function localStorageSet() {
+//   localStorage.setItem('all books',JSON.stringify(allBooks));
+// }
 
 
-// to get objects from local storage
-function localStorageGet() {
-  let data = localStorage.getItem('Book');
-  let dataParsed = JSON.parse(data);
+
+
+// // to get objects from local storage
+// function localStorageGet() {
+//   let data = localStorage.getItem('Book');
+//   let dataParsed = JSON.parse(data);
 
   // let availData = localStorage.getItem('available');
   // availParsed = JSON.parse(availData);
@@ -282,3 +290,13 @@ function localStorageGet() {
 
 
 
+function localStorageGetb() {
+  let data = localStorage.getItem('Book');
+  let dataParsed = JSON.parse(data);
+  console.log(dataParsed);
+  if (dataParsed) {
+    for(let i=0;i<dataParsed.length;i++){
+      allBooks.push(dataParsed[i]);
+    }
+  }
+}

@@ -18,7 +18,8 @@ userFeedback.addEventListener('submit', handleFeedback);
 
 let ul = document.getElementById('feedbackList');
 
-let savedBooks = localStorage.getItem('all books');
+let savedBooks = localStorage.getItem('LocalBook');
+
 savedBooks = JSON.parse(savedBooks);
 
 
@@ -122,7 +123,6 @@ function renderFeedback() {
     let p = document.createElement('p');
     li.appendChild(p);
     p.textContent = feedbacks[i].feedback;
-
   }
 }
 
@@ -137,11 +137,7 @@ function renderBookNames() {
     select.appendChild(option);
     option.setAttribute('value', i);
     option.textContent = savedBooks[i].bookName;
-
   }
-
 }
 
 renderBookNames();
-
-
