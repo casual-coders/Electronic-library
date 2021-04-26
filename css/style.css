@@ -2,6 +2,8 @@ body{
   background-color: whitesmoke;
 }
 
+
+
 main{
   margin-left: 10%;
   margin-right: 10%;
@@ -150,4 +152,61 @@ main{
 .container p{
   font-size: 10px;
   padding: 0.2em;
+}
+
+#history {
+  height: 400px;
+  border-radius: 100px;
+  margin-bottom: 3%;
+  padding-right: 2% ;
+}
+
+#history .hist-img {
+  float: left;
+  width: 50%;
+  background: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat;
+  height: 100%;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+
+}
+
+#history .hist-content {
+  float: right;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 50px 10px;
+  overflow: hidden;
+}
+
+#history .hist-content p {
+  margin: 20px 0;
+  padding: 40px;
+  font-weight: normal;
+  font-size: .9em;
+  color: #161F22;
+  line-height:1.2;
+}
+
+#history .hist-content h2 {
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+
+
+.bg-dark {
+  background: #f1e6e6;
+  color: #161F22;
+}
+
+
+
+.bg-primary {
+  background:lightgoldenrodyellow;
+  color: #333;
+}
+
+.text-primary {
+  color: #567D87;
 }

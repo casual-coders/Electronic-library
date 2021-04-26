@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
 *{padding: 0; margin: 0; box-sizing: border-box;}
 body{height: 1300px;}
 header {
@@ -22,7 +24,8 @@ header .overlay{
 }
 
 h1 {
-	font-family: 'Dancing Script', cursive;
+	/* font-family: 'Dancing Script', cursive; */
+	font-family: 'Zen Dots', cursive;
 	font-size: 80px;
 	margin-bottom: 30px;
 }
