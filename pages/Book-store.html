@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/sweetalert2.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/book-store.css">
@@ -28,15 +29,16 @@
                 <button><a href="aboutUs.html">About Us</a></button>
                 
 
-                    </div>
+        </div>
 
     </header>
 
     <main>
         <div id="form">
+            <p>To order your book please fill in the following form</p>
             <form action="" id="userEnter">
                 <fieldset>       
-                   <label for="cat">category:</label>
+                   <label for="cat">Book Category:</label>
                    <select name="category" id="cat">
                     <option value="All">All</option>
                      <option value="medical">Medical books</option>
@@ -44,25 +46,36 @@
                      <option value="computer">Computer and programming</option>
                    </select>
                     <br>
-                   <label for="book">Book</label>
-                   <input type="text" id="book" placeholder="Book name.." required>
+                   <label for="book">Book Title</label>
+                   <input type="text" id="book" placeholder="Book Title ..." required>
                    <br>
                    <label for="yourName">Your name</label>
-                   <input type="text" id="yourName" placeholder="your name.." required>
+                   <input type="text" id="yourName" placeholder="Your Name ..." required>
                    <br>
-                   <label for="loction">your location</label>
+                   <label for="loction">Your location</label>
+                   <textarea name="message" rows="10" cols="30" id="location" placeholder="Your Location ..." required></textarea>
                    <br>
-                   <textarea name="message" rows="10" cols="30" id="location" placeholder="your location.." required></textarea>
-                   <br>
-                   <input type="submit" value="order book">
+                   <input type="submit" value="Order Book">
                 </fieldset>
             </form>
         </div>
-    
-            <div id="cards">
-    
+
+
+
+
+    <div class="wrapper" id="div">
+         
+    </div> 
+        <div id="cards">
+        
+
+        <div>
+            <h2 id="orderBooksHeading">Top Rated Books</h2>
+        </div>
+
+            <div id="cards"> 
+
             </div>
-    
 
     </main>
     <footer class="footer-distributed">
@@ -70,7 +83,7 @@
             <h3>Zad<span>Shelves</span></h3>
             <p class="footer-links">
                 <a href="../index.html" class="">Home</a>
-                <a href="Book-store.html">Book Store</a>
+                <a href="Book-store.html">Borrow</a>
                 <a href="Donate-book.html">Donate</a>
                 <a href="aboutUs.html">About Us</a>
             </p>
@@ -79,7 +92,7 @@
         <div class="footer-center">
             <div>
                 <i class="fa fa-map-marker"></i>
-                <p><span>Location</span> road street</p>
+                <p>Amman, Airport Road, Marj Al Hamam Bridge</p>
             </div>
             <div>
                 <i class="fa fa-phone"></i>
@@ -87,7 +100,7 @@
             </div>
             <div>
                 <i class="fa fa-envelope"></i>
-                <p><a href="##">Zad@company.com</a></p>
+                <p><a href="##">Info@zadshelves.com</a></p>
             </div>
         </div>
         <div class="footer-right">
@@ -105,6 +118,7 @@
             </div>
         </div>
     </footer>
+<script src="../js/sweetalert2.js"></script>
     <script src="../js/book-store.js"></script>
 </body>
 </html>
