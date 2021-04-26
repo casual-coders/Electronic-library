@@ -14,7 +14,7 @@ main{
   margin-bottom: 3%;
   background-color: #EAEFF0;
   padding: 2.5%;
-  border-radius: 100px;
+  border-radius: 50px;
 }
 
 /* #home .right-home {
@@ -66,12 +66,23 @@ main{
   margin: 1% 0;
   opacity: 0.9;
   /* background: url('https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center/cover; */
-  padding: 50px 0;
+  background: url(https://images.pexels.com/photos/4590785/pexels-photo-4590785.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center/cover;
+  padding: 37px 0;
   /* border-radius: 100px; */
   float: left;
   width: 50%;
   /* background-color: #EAEFF0; */
+  display: inline-block;
+  /* border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px; */
 }
+#qtImage{
+  margin: 1% 0;
+  display: inline-block;
+  width: 49%;
+  height: 100%;
+}
+
 #Qoutes h2 {
   text-align: center;
   font-size: x-large;
@@ -158,10 +169,9 @@ main{
   padding: 0.2em;
 }
 
-<<<<<<< HEAD
 #history {
   height: 400px;
-  border-radius: 100px;
+  border-radius: 50px;
   margin-bottom: 3%;
   padding-right: 2% ;
 }
@@ -169,10 +179,10 @@ main{
 #history .hist-img {
   float: left;
   width: 50%;
-  background: url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat;
+  background: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1453&q=80') no-repeat;
   height: 100%;
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
 
 }
 
@@ -199,28 +209,27 @@ main{
   font-size: 1.2em;
 }
 
-
 .bg-dark {
   background: #f1e6e6;
   color: #161F22;
 }
 
-
-
 .bg-primary {
   background:lightgoldenrodyellow;
   color: #333;
+  
 }
 
 .text-primary {
-  color: #567D87;
-=======
+    color: #567D87;
+    /* position: absolute; */
+    /* left: 10%; */
+    height: 100%;
+    width: 80%;
+  }
 
-#open-book{
 position: absolute;
-
     left: 10%;
     height: 100%;
     width: 80%;
->>>>>>> main
 }
