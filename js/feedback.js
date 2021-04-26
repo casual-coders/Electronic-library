@@ -19,6 +19,7 @@ userFeedback.addEventListener('submit', handleFeedback);
 let ul = document.getElementById('feedbackList');
 
 let savedBooks = localStorage.getItem('LocalBook');
+
 savedBooks = JSON.parse(savedBooks);
 
 
@@ -65,7 +66,8 @@ function handleFeedback(event) {
   p.textContent =review.feedback;
 
   saveToLS();
-
+  // eslint-disable-next-line no-undef
+  swal('Successfully !', 'Your feed submitted','success');
 }
 
 
