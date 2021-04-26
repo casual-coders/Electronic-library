@@ -35,9 +35,10 @@
 
     <main>
         <div id="form">
+            <p>To order your book please fill in the following form</p>
             <form action="" id="userEnter">
                 <fieldset>       
-                   <label for="cat">category:</label>
+                   <label for="cat">Book Category:</label>
                    <select name="category" id="cat">
                     <option value="All">All</option>
                      <option value="medical">Medical books</option>
@@ -45,20 +46,20 @@
                      <option value="computer">Computer and programming</option>
                    </select>
                     <br>
-                   <label for="book">Book</label>
-                   <input type="text" id="book" placeholder="Book name.." required>
+                   <label for="book">Book Title</label>
+                   <input type="text" id="book" placeholder="Book Title ..." required>
                    <br>
                    <label for="yourName">Your name</label>
-                   <input type="text" id="yourName" placeholder="your name.." required>
+                   <input type="text" id="yourName" placeholder="Your Name ..." required>
                    <br>
-                   <label for="loction">your location</label>
+                   <label for="loction">Your location</label>
+                   <textarea name="message" rows="10" cols="30" id="location" placeholder="Your Location ..." required></textarea>
                    <br>
-                   <textarea name="message" rows="10" cols="30" id="location" placeholder="your location.." required></textarea>
-                   <br>
-                   <input type="submit" value="order book">
+                   <input type="submit" value="Order Book">
                 </fieldset>
             </form>
         </div>
+
 
 
 
@@ -67,6 +68,13 @@
     </div> 
         <div id="cards">
         
+
+        <div>
+            <h2 id="orderBooksHeading">Top Rated Books</h2>
+        </div>
+
+            <div id="cards"> 
+
             </div>
 
     </main>
