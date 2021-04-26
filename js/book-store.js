@@ -39,12 +39,15 @@ function books() {
   new Book ('structural analysis','https://images-na.ssl-images-amazon.com/images/I/51eJSRwXxdL._SX423_BO1,204,203,200_.jpg','engineering','structural analysis and design');
 
 }
+
+
 books();
+localStorageGetb();
+saveToLocal();
 
 
 
-
-localStorageGet();
+// localStorageGet();
 let arr;
 function renderBooks() {
   outerContainer = document.getElementById('div');
@@ -176,6 +179,8 @@ document.getElementById('cat').onchange = function select() {
   }
   if(selected === 'All'){
     renderBooks();
+    // saveToLocal();
+
   }
 };
 
@@ -232,7 +237,10 @@ function handleSubmitting(event) {
 }
 
 
-
+// to save objects in localstorage
+function saveToLocal() {
+  localStorage.setItem('LocalBook',JSON.stringify(allBooks));
+}
 
 
 function localStorageSet() {
@@ -266,3 +274,13 @@ function localStorageGet() {
 
 
 
+function localStorageGetb() {
+  let data = localStorage.getItem('Book');
+  let dataParsed = JSON.parse(data);
+  console.log(dataParsed);
+  if (dataParsed) {
+    for(let i=0;i<dataParsed.length;i++){
+      allBooks.push(dataParsed[i]);
+    }
+  }
+}
