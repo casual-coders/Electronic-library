@@ -1,11 +1,11 @@
 'use strict';
 
 let form = document.getElementById('userEnter');
-let cardsBox = document.getElementById('cards');
+
 let outerContainer;
 let img;
 let innerContainer;
-let book;
+let href;
 let cat;
 let disc;
 let available;
@@ -37,6 +37,12 @@ function books() {
   new Book ('surgical recall','https://images-na.ssl-images-amazon.com/images/I/51U2q3Apb+L._SX312_BO1,204,203,200_.jpg','medical','general surgery');
   new Book ('pathoma','https://3.bp.blogspot.com/-UygB6ixcwD8/XAv7AQqP30I/AAAAAAAAFLQ/3BnH6dhiPGMLtVB5wgPIxvwYz4b4wFmfwCLcBGAs/s1600/Fundamentals-of-Pathology-Pathoma-2017.jpg','medical','summery for human pathologies');
   new Book ('structural analysis','https://images-na.ssl-images-amazon.com/images/I/51eJSRwXxdL._SX423_BO1,204,203,200_.jpg','engineering','structural analysis and design');
+  new Book ('RC Design','https://media.wiley.com/product_data/coverImage300/04/11188791/1118879104.jpg','engineering','design of RC members');
+  new Book ('highway engineering','https://images-na.ssl-images-amazon.com/images/I/51iEpetVKkL._SX353_BO1,204,203,200_.jpg','engineering','design of highway roads');
+  new Book ('numarical methods','https://images-na.ssl-images-amazon.com/images/I/81vHmMqtAVL.jpg','engineering','solve complex equations');
+  new Book ('java script','https://media.springernature.com/w306/springer-static/cover-hires/book/978-1-4842-4395-4','computer','explains how to use javascript');
+  new Book ('HTML','https://i2.wp.com/www.programmer-books.com/wp-content/uploads/2018/11/HTML-A-Beginners-Guide-5th-Edition.jpg?fit=404%2C500&ssl=1','computer','explain how to use html');
+  new Book ('python','https://stackabuse.com/content/images/2018/01/thinklikeacomputerscientist.jpg','computer','explains how python work');
 
 }
 books();
@@ -45,7 +51,8 @@ books();
 
 
 localStorageGet();
-let arr;
+localStorageSet();
+
 function renderBooks() {
   outerContainer = document.getElementById('div');
 
@@ -55,15 +62,20 @@ function renderBooks() {
 
 
   for (let i = 0 ; i < allBooks.length; i++) {
+
  
 
     div2 = document.createElement('div');
     div2.setAttribute('class','book');
     outerContainer.appendChild(div2);
 
+    href =document.createElement('a');
+    href.setAttribute('href','pages/feedback.html');
+    div2.appendChild(href);
+
     div3 = document.createElement('div');
     div3.setAttribute('class','inner-book');
-    div2.appendChild(div3);
+    href.appendChild(div3);
 
     div4 = document.createElement('div');
     div4.setAttribute('class','img');
@@ -96,6 +108,10 @@ function renderBooks() {
     bookName=document.createElement('p');
     bookName.textContent=`${allBooks[i].bookName}`;
     div2.appendChild(bookName);
+
+    // disc= document.createElement('p');
+    // div2.appendChild(disc);
+    // disc.textContent=`Discription: ${allBooks[i].discription}`;
 
   }
 
@@ -170,7 +186,7 @@ document.getElementById('cat').onchange = function select() {
 
 
       // disc= document.createElement('p');
-      // innerContainer.appendChild(disc);
+      // div2.appendChild(disc);
       // disc.textContent=`Discription: ${allBooks[i].discription}`;
     }
   }
@@ -214,7 +230,7 @@ function handleSubmitting(event) {
     if (allBooks[i].bookName.toLowerCase() === bName.toLowerCase()) {
       if (allBooks[i].availability === true) {
         allBooks[i].availability=false;
-        swal('Succesfully !', `${userName} you ordered ${bName} book, it will be delivered as soon as possible to: ${location}`,'success');
+        swal('Successfully !', `${userName} you ordered ${bName} book, it will be delivered as soon as possible to: ${location}`,'success');
         // alert(`${userName} you ordered ${bName} book, it will be delivered as soon as possible to: ${location}`);
         break;
       }else if (allBooks[i].availability === false) {
@@ -236,7 +252,7 @@ function handleSubmitting(event) {
 
 
 function localStorageSet() {
-  localStorage.setItem('available',JSON.stringify(allBooks));
+  localStorage.setItem('all books',JSON.stringify(allBooks));
 }
 
 
