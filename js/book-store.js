@@ -70,7 +70,7 @@ function renderBooks() {
     outerContainer.appendChild(div2);
 
     href =document.createElement('a');
-    href.setAttribute('href','pages/feedback.html');
+    href.setAttribute('href','../pages/feedback.html');
     div2.appendChild(href);
 
     div3 = document.createElement('div');
