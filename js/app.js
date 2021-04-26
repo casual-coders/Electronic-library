@@ -178,7 +178,7 @@ function handleSubmitting(event) {
 
   count++;
   localStorageSet();
-  swal('Succesfully !', 'thank you','success');
+  swal('Succesfully !', 'thank you for donating','success');
 }
 
 
