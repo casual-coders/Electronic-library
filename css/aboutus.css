@@ -142,7 +142,7 @@ main section:nth-child(1) p {
     padding:0 20px;
     font-family: 'Josefin Slab', serif;
     font-weight: 600;
-    padding: 20px;
+    padding: 2.3%;
 }
 main section:nth-child(1) p span.i{
     font-style: italic;
@@ -193,6 +193,7 @@ main section span.b {
     background: linear-gradient(-45deg, #E1B4ED, #FFD8C0, #B2ECDF, #F8FEBF);
     background-size: 400% 400%;
     animation: gradient 5s ease infinite;
+    
 }
 
 
