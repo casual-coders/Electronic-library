@@ -113,6 +113,7 @@ main{
   height: 100%;
   background-color: #EAEFF0;
   border-radius: 50px;
+
 }
 
 #cards h2 {
@@ -153,3 +154,74 @@ main{
   padding: 0.2em;
 }
 
+#scrolldiv {
+  position: relative;
+  visibility:hidden;
+  height: 500px;
+}
+#scrolldiv p {
+  text-align: center;
+  font-weight: bolder;
+}
+#slideL1 {
+  position: absolute;
+  left: -600px;
+  /* width: 600px;
+  height: 370px; */
+  /* background: blue; */
+  
+  animation: slideL1 0.5s forwards;
+  animation-delay: 3s;
+}
+@keyframes slideL1 {
+  0% { left: -600px; }
+  50% { left: -200px; }
+  75% {left: 0px;}
+  100% { left: 100px; }
+}
+
+#slideR1 {
+  position: absolute;
+  right: -600px;
+  animation: slideR1 0.5s forwards;
+  animation-delay: 3s;
+}
+@keyframes slideR1 {
+  0% { right: -600px; }
+  50% { right: -200px; }
+  75% {right: 0px;}
+  100% { right: 100px; }
+}
+#slideL2 {
+  position: absolute;
+  left: -600px;
+  bottom: 25px;
+  animation: slideL2 0.5s forwards;
+  animation-delay: 5s;
+}
+@keyframes slideL2 {
+  0% { left: -600px; }
+  50% { left: -200px; }
+  75% {left: 0px;}
+  100% { left: 100px; }
+}
+#slideR2 {
+  position: absolute;
+  right: -600px;
+  bottom: 25px;
+  animation: slideR2 0.5s forwards;
+  animation-delay: 5s;
+}
+@keyframes slideR2 {
+  0% { right: -600px; }
+  50% { right: -200px; }
+  75% {right: 0px;}
+  100% { right: 100px; }
+}
+
+/* @keyframes slide {
+  0% { left: -600px; }
+  25% { left: -200px; }
+  50% { left: 0px; }
+  100% { left: 200px; }
+} */
