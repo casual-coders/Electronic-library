@@ -63,9 +63,12 @@ main{
   height: 100%;
   margin: 1% 0;
   opacity: 0.9;
-  background: url('https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center/cover;
+  /* background: url('https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center/cover; */
   padding: 50px 0;
-  border-radius: 100px;
+  /* border-radius: 100px; */
+  float: left;
+  width: 50%;
+  /* background-color: #EAEFF0; */
 }
 #Qoutes h2 {
   text-align: center;
@@ -151,4 +154,13 @@ main{
 .container p{
   font-size: 10px;
   padding: 0.2em;
+}
+
+
+#open-book{
+position: absolute;
+
+    left: 10%;
+    height: 100%;
+    width: 80%;
 }

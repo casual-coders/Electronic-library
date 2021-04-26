@@ -11,7 +11,7 @@ section {
   width: 100%;
   display: inline-block;
   background: #333;
-  height: 50vh;
+  /* height: 50vh; */
   text-align: center;
   font-size: 22px;
   font-weight: 700;
