@@ -56,4 +56,4 @@ MIT license was used for this project.
 
 ### Humam Mkhzoumi (Team Leader)
 
-Come find us on GitHub: https://github.com/casual-coders
+[Come find us on GitHub](https://github.com/casual-coders)
