@@ -35,7 +35,7 @@ main{
   min-height: 100%;
 }
 
-.one {
+/* .one {
   margin: 0.7em 0;
   font-size: 40px;
   line-height: 1.2;
@@ -47,7 +47,15 @@ main{
   font-size: 40px;
   line-height: 1.2;
   color: #161f22 ;
+} */
+
+#home h4{
+  margin-top: 0.7em 0;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #161f22 ;
 }
+
 #home .left-home p {
   margin: 20px 0;
   padding-top: 20px;
