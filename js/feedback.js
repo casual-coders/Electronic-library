@@ -18,7 +18,8 @@ userFeedback.addEventListener('submit', handleFeedback);
 
 let ul = document.getElementById('feedbackList');
 
-let savedBooks = localStorage.getItem('Book');
+let savedBooks = localStorage.getItem('LocalBook');
+
 savedBooks = JSON.parse(savedBooks);
 
 
@@ -65,7 +66,8 @@ function handleFeedback(event) {
   p.textContent =review.feedback;
 
   saveToLS();
-
+  // eslint-disable-next-line no-undef
+  swal('Successfully !', 'Your feed submitted','success');
 }
 
 
@@ -121,7 +123,6 @@ function renderFeedback() {
     let p = document.createElement('p');
     li.appendChild(p);
     p.textContent = feedbacks[i].feedback;
-
   }
 }
 
@@ -136,11 +137,7 @@ function renderBookNames() {
     select.appendChild(option);
     option.setAttribute('value', i);
     option.textContent = savedBooks[i].bookName;
-
   }
-
 }
 
 renderBookNames();
-
-
