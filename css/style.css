@@ -37,7 +37,7 @@ main{
   margin: 0.7em 0;
   font-size: 40px;
   line-height: 1.2;
-  color: #567D87 ;
+  color: lightseagreen ;
 }
 
 .two{
@@ -59,30 +59,31 @@ main{
 
 /* Qoutes */
 
-#Qoutes {
+.Qoutes {
   height: 100%;
-  margin: 1% 0;
+  /* margin: 1% 0; */
   opacity: 0.9;
   /* background: url('https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500') no-repeat center center/cover; */
   padding: 50px 0;
   /* border-radius: 100px; */
   float: left;
   width: 50%;
+ 
   /* background-color: #EAEFF0; */
 }
-#Qoutes h2 {
+.Qoutes h2 {
   text-align: center;
   font-size: x-large;
   padding:20px 0;
   font-weight: bolder;
   text-decoration: none;
 }
-#Qoutes .quote {
+.Qoutes .quote {
   padding: 10px;
   margin-bottom: 0px;
   /* opacity: 0.8; */
 }
-#Qoutes .quote img {
+.Qoutes .quote img {
   width: 100px;
   height: 130px;
   /* float: left; */
@@ -111,19 +112,22 @@ main{
 
 
 #cards {
-  margin: 2% 0;
+  margin: 6% 0;
   height: 100%;
   background-color: #EAEFF0;
   border-radius: 50px;
   text-decoration: none;
+  padding-bottom: 5%;
+  box-shadow:1px 1px 5px 1px lightgray;
 }
 
 #cards h2 {
-  padding: 2% 0;
+  padding: 3% 0;
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
   color: #161F22;
+  color: lightseagreen;
 }
 
 .card {
@@ -143,6 +147,7 @@ main{
 .container {
   padding: 2px 2px;
   background: #fcedd8;
+  min-height: 105px;
   /* color:  rgb(134, 96, 86); */
 }
 .container h4{
@@ -150,6 +155,7 @@ main{
   font-size: 12px;
   font-weight: bolder;
   padding: 0.2em;
+  margin-bottom: 0.6em;
 }
 .container p{
   font-size: 10px;
@@ -165,19 +171,20 @@ position: absolute;
     width: 80%;
 }
 
-#nyTimes {
-  height: 100%;
-  margin: 1% 0;
+.nyTimes {
+  height: 85%;
+  margin: 5% 0;
   opacity: 0.9;
   /* background: url(https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) no-repeat center center/cover; */
-  padding: 50px 0;
+  /* padding: 50px 0; */
   /* border-radius: 100px; */
   float: left;
-  width: 50%;
-  /* background-color: #EAEFF0; */
+  width: 48%;
+  /* background-color: white; */
+  border-radius: 0 15px 15px 0;
 }
 
-#nyTimes h2 {
+.nyTimes h2 {
   text-align: left;
   margin-left: 15px;
   font-size: x-large;
@@ -186,7 +193,7 @@ position: absolute;
   text-decoration: none;
 }
 
-#nyTimes h3 {
+.nyTimes h3 {
   text-align: left;
   margin-left: 20px;
   font-size: smaller;
@@ -195,20 +202,172 @@ position: absolute;
   text-decoration: none;
 }
 
-#nyTimes p {
+.nyTimes p {
   display: inline-block;
-  width: 85%;
+  width: 90%;
   text-align: justify;
   margin-left: 20px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   line-height: 1.5;
 }
 
-#nyTimes a {
+.nyTimes a {
   font-style: italic;
   color: #2196f3;
+  font-size: smaller;
 }
-#nyTimes span {
+.nyTimes span {
   font-style: italic;
   font-weight: lighter;
 }
+
+/* ==================================== */
+
+ h1 {
+     font-family: 'Antonio', sans-serif;
+     /* font-family: 'Raleway', sans-serif;
+     font-family: 'Open Sans', cursive; */
+     font-size: 100px;
+ }
+
+
+h1 span{
+  color:lightseagreen;
+}
+
+.bookimg{
+  /* background-color: #EAEFF0; */
+  border-radius: 50px;
+  height: 800px;
+}
+
+#slideshow {
+  position: relative;
+  background-image: url(../img/book.png) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.absolute {
+  position:absolute;
+  top:0;
+}
+#dots {
+  text-align: center;
+  padding:20px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.fadeout {
+  -webkit-animation-name: fadeout;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fadeout;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity:0} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0} 
+  to {opacity: 1}
+} 
+
+@-webkit-keyframes fadeout {
+  from {opacity:1} 
+  to {opacity: 0}
+}
+
+@keyframes fadeout {
+  from {opacity: 1} 
+  to {opacity: 0}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.bookimg {
+  opacity:0;
+  transition: opacity 1.5s;
+} 
+
+
+
+
+
+#history {
+  height: 400px;
+  border-radius: 50px;
+  margin-bottom: 3%;
+  padding-right: 2% ;
+}
+#history .hist-img {
+  float: left;
+  width: 50%;
+  background: url('../img/bb.jfif') no-repeat;
+  background-size: cover;
+  height: 100%;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+#history .hist-content {
+  float: right;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 50px 10px;
+  overflow: hidden;
+}
+#history .hist-content p {
+  /* margin: 20px 0; */
+  padding: 40px;
+  font-weight: normal;
+  font-size: .9em;
+  color: #161F22;
+  line-height:1.2;
+  text-align: justify;
+}
+#history .hist-content h2 {
+  font-weight: bolder;
+  font-size: 1.2em;
+}
+.bg-dark {
+  background: #EAEFF0;
+  color: #161F22;
+}
+.bg-primary {
+  background:lightgoldenrodyellow;
+  color: #333;
+}
+.text-primary {
+    color: #57B3AB;
+    /* position: absolute; */
+    /* left: 10%; */
+    height: 100%;
+    width: 80%;
+  }
