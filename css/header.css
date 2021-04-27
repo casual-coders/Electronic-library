@@ -1,11 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio&display=swap');
+
 *{padding: 0; margin: 0; box-sizing: border-box;}
 body{height: 1300px;}
 header {
-	background: url('../img/bg2.png');
-	background: url('../img/bg3.jpg');
-	background: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=841&q=80');	
-
-	text-align: center;
+	padding-top: 80px;
+	/* background: url('../img/bg2.png');
+	background: url('../img/bg3.jpg'); */
+	/* background: url('../img/heaD.jfif') ; */
+	background-image: linear-gradient(rgba(0, 0, 0, 0.1),
+                       rgba(0, 0, 0, 0.5)), url("../img/heaD.jfif");
+	
+	/* text-align: center; */
 	width: 100%;
 	height: auto;
 	background-size: cover;
@@ -23,42 +28,45 @@ header .overlay{
   /* background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%); */
 	
 }
-
 h1 {
-	font-family: 'Dancing Script', cursive;
-	font-size: 80px;
-	margin-bottom: 30px;
-	margin-top: 4%;
+	font-family: 'Antonio', sans-serif;
+	/* font-family: 'Raleway', sans-serif;
+	font-family: 'Open Sans', cursive; */
+	font-size: 100px;
 }
-
 #logo img{
     width: 150px;
     height: 150px;
 }
 
-h3, p {
+h3{
 	font-family: 'Open Sans', sans-serif;
-	margin-bottom: 30px;
+	margin: 30px 0;
 }
 
+
 button {
-	border: none;
-	outline: none;
-	padding: 10px 20px;
-	border-radius: 50px;
-	color: #333;
-	background: #fff;
-	margin-bottom: 50px;
-	box-shadow: 0 3px 20px 0 #0000003b;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #333;
+    background: #fff;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 20px 0 #0000003b;
 }
+
+
+
 button:hover{
 	cursor: pointer;
     box-shadow: 0 15px 25px 0 rgba(0,0,0,1);
+	
 }
 
 
 a{
     text-decoration: none;
     color: #333;
-	font-size: 1.4em;
+	/* font-size: 1.4em; */
 }

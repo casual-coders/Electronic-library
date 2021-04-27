@@ -54,7 +54,7 @@ saveToLocal();
 
 
 
-// localStorageGet();
+// render books on the page
 
 function renderBooks() {
   outerContainer = document.getElementById('div');
@@ -65,8 +65,6 @@ function renderBooks() {
 
 
   for (let i = 0 ; i < allBooks.length; i++) {
-
- 
 
     div2 = document.createElement('div');
     div2.setAttribute('class','book');
@@ -112,20 +110,16 @@ function renderBooks() {
     bookName.textContent=`${allBooks[i].bookName}`;
     div2.appendChild(bookName);
 
-    // disc= document.createElement('p');
-    // div2.appendChild(disc);
-    // disc.textContent=`Discription: ${allBooks[i].discription}`;
-
   }
 
 
 }
 
-
 renderBooks();
 
 
 
+// filtering the books
 
 document.getElementById('cat').onchange = function select() {
   let selected = document.getElementById('cat').value;
@@ -141,9 +135,13 @@ document.getElementById('cat').onchange = function select() {
       div2.setAttribute('class','book');
       outerContainer.appendChild(div2);
 
+      href =document.createElement('a');
+      href.setAttribute('href','../pages/feedback.html');
+      div2.appendChild(href);
+
       div3 = document.createElement('div');
       div3.setAttribute('class','inner-book');
-      div2.appendChild(div3);
+      href.appendChild(div3);
 
       div4 = document.createElement('div');
       div4.setAttribute('class','img');
@@ -177,47 +175,13 @@ document.getElementById('cat').onchange = function select() {
       bookName.textContent=`${allBooks[i].bookName}`;
       div2.appendChild(bookName);
 
-
-
-      // available= document.createElement('p');
-      // innerContainer.appendChild(available);
-      // if (allBooks[i].availability === true) {
-      //   available.textContent='status: available';
-      // }else if (allBooks[i].availability === false) {
-      //   available.textContent='status: unavailable';
-      // }
-
-
-      // disc= document.createElement('p');
-      // div2.appendChild(disc);
-      // disc.textContent=`Discription: ${allBooks[i].discription}`;
     }
   }
   if(selected === 'All'){
     renderBooks();
-    // saveToLocal();
 
   }
 };
-
-
-
-
-
-
-
-// div2.addEventListener('click',navigate);
-
-// function navigate(event) {
-//   console.log(event);
-//   for (let i = 0; i < allBooks.length; i++) {
-//     if (bookName === allBooks[i].bookName) {
-//       localStorage.setItem('pressed',JSON.stringify(allBooks[i]));
-//     }
-//   }
-
-//   window.location.href = 'https://www.w3schools.com/howto/howto_css_zoom_hover.asp';
-// }
 
 
 
@@ -243,8 +207,6 @@ function handleSubmitting(event) {
         // alert(`${userName} sorry ${bName} book, is unavailable`);
         break;
       }
-      // localStorage.setItem('availablility',JSON.stringify(allBooks));
-
 
     }
     // arr.push(allBooks[i]);
