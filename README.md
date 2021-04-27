@@ -32,7 +32,7 @@ This website uses ``Javascript, CSS, and HTML`` in its code. Make sure that your
 * cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
 
 ## Wireframe:
-[Wireframe Link]("https://www.figma.com/file/asHMjawXYHZm32v4rJxI6C/Zad_Shelves")
+[Wireframe Link](https://www.figma.com/file/asHMjawXYHZm32v4rJxI6C/Zad_Shelves)
 
 ## License:
 
