@@ -1,14 +1,11 @@
+/* eslint-disable no-undef */
 'use strict';
 
 let form = document.getElementById('userEnter');
 
 let outerContainer;
 let img;
-let innerContainer;
 let href;
-let cat;
-let disc;
-let available;
 let div2;
 let div3;
 let div4;
@@ -209,9 +206,9 @@ function handleSubmitting(event) {
       }
 
     }
-    // arr.push(allBooks[i]);
+
   }
-  // localStorageSet();
+
 }
 
 
@@ -221,37 +218,7 @@ function saveToLocal() {
 }
 
 
-// function localStorageSet() {
-//   localStorage.setItem('all books',JSON.stringify(allBooks));
-// }
-
-
-
-
-// // to get objects from local storage
-// function localStorageGet() {
-//   let data = localStorage.getItem('Book');
-//   let dataParsed = JSON.parse(data);
-
-// let availData = localStorage.getItem('available');
-// availParsed = JSON.parse(availData);
-
-// if (dataParsed) {
-//   for (let i = 0; i < dataParsed.length; i++) {
-//     allBooks.push(dataParsed[i]);
-//   }
-// }
-// console.log(allBooks);
-
-
-
-
-
-
-
-
-
-
+//to get local storage data
 function localStorageGetb() {
   let data = localStorage.getItem('Book');
   let dataParsed = JSON.parse(data);
