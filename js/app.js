@@ -2,13 +2,8 @@
 
 
 let form = document.getElementById('userEnter');
-let cardsBox = document.getElementById('cards');
 let outerContainer;
 let img;
-let innerContainer;
-let book;
-let cat;
-let disc;
 let div2;
 let div3;
 let div4;
@@ -31,42 +26,12 @@ function Book(bName,path,category,discription) {
 
 }
 
-
+// getting data from local storage
 localStorageGet();
 
-// function renderBooks() {
-
-//   for (let i = 0 ; i < allBooks.length; i++) {
-
-//     outerContainer = document.createElement('div');
-//     outerContainer.setAttribute('class','card');
-//     cardsBox.appendChild(outerContainer);
-
-//     img = document.createElement('img');
-//     img.setAttribute('src',allBooks[i].path);
-//     outerContainer.appendChild(img);
-
-//     innerContainer = document.createElement('div');
-//     innerContainer.setAttribute('class','container');
-//     outerContainer.appendChild(innerContainer);
-
-//     book = document.createElement('h4');
-//     innerContainer.appendChild(book);
-//     book.textContent=`Book Name: ${allBooks[i].bookName}`;
 
 
-//     cat= document.createElement('p');
-//     innerContainer.appendChild(cat);
-//     cat.textContent=`category: ${allBooks[i].category}`;
-
-
-//     disc= document.createElement('p');
-//     innerContainer.appendChild(disc);
-//     disc.textContent=`Discription: ${allBooks[i].discription}`;
-//   }
-
-// }
-
+//  renderBooks
 function renderBooks() {
   for (let i = 0 ; i < allBooks.length; i++) {
 
@@ -178,6 +143,7 @@ function handleSubmitting(event) {
 
   count++;
   localStorageSet();
+  // eslint-disable-next-line no-undef
   swal('Successfully !', 'Thank you for donating','success');
 }
 

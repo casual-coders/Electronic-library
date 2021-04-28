@@ -10,7 +10,7 @@ function plusSlides(n) {
 function currentSlide(n) {
   clearInterval(autoslide);
   showSlides2(slideIndex = n);
-  autoslide = setInterval(showSlides, 3000); // Change image every 2 seconds
+  autoslide = setInterval(showSlides, 5000); // Change image every 2 seconds
 }
 
 function showSlides2(n) {
