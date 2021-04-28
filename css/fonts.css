@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Zen+Dots&display=swap');
+
+p {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'Zen Dots', cursive;
+}
